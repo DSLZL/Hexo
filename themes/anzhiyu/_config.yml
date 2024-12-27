@@ -140,7 +140,7 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://s2.loli.net/2024/12/27/cq5eVwNsFinr3tp.jpg
+  img: https://s3.bmp.ovh/imgs/2024/12/27/ca96a111a45d979d.jpg
   effect: false
 
 # Disable all banner image
@@ -246,10 +246,10 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-    - img: https://s2.loli.net/2024/12/27/picQqCGTaueDkP8.png
+    - img: https://s3.bmp.ovh/imgs/2024/12/27/03c2948e6746ccad.png
       link:
       text: 微信
-    - img: https://s2.loli.net/2024/12/27/yOK1ngE7P8DLvxb.jpg
+    - img: https://s3.bmp.ovh/imgs/2024/12/27/e23f0f4634e8f6d4.jpg
       link:
       text: 支付宝
 
@@ -791,7 +791,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://s2.loli.net/2024/12/27/cq5eVwNsFinr3tp.jpg # 自定加载动画义头像
+  avatar: https://s3.bmp.ovh/imgs/2024/12/27/ca96a111a45d979d.jpg # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
