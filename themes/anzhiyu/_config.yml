@@ -103,9 +103,9 @@ algolia_search:
 # Settings: https://www.algolia.com/
 docsearch:
   enable: true
-  appId: CGINT9GIXF # see email
-  apiKey: 50a2a8a16355ab8f6bc4a0e896d40e19 # see email
-  indexName: games-dslzl # see email
+  appId: "GINT9GIXF" # see email
+  apiKey: "50a2a8a16355ab8f6bc4a0e896d40e19" # see email
+  indexName: "games-dslzl" # see email
   option:
 
 # Local search
