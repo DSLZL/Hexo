@@ -90,7 +90,7 @@ author_status:
 
 # Algolia search
 algolia_search:
-  enable: true
+  enable: false
   hits:
     per_page: 6
   tags:
@@ -102,10 +102,10 @@ algolia_search:
 # Crawler Admin Console: see https://crawler.algolia.com/
 # Settings: https://www.algolia.com/
 docsearch:
-  enable: false
-  appId: # see email
-  apiKey: # see email
-  indexName: # see email
+  enable: true
+  appId: CGINT9GIXF # see email
+  apiKey: 50a2a8a16355ab8f6bc4a0e896d40e19 # see email
+  indexName: games-dslzl # see email
   option:
 
 # Local search
@@ -246,10 +246,10 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-    - img: https://s3.bmp.ovh/imgs/2024/12/27/03c2948e6746ccad.png
+    - img: /img/weixin.png
       link:
       text: 微信
-    - img: https://s3.bmp.ovh/imgs/2024/12/27/e23f0f4634e8f6d4.jpg
+    - img: /img/zhifubao.jpg
       link:
       text: 支付宝
 
@@ -1146,9 +1146,9 @@ visitorMail:
 ptool:
   enable: true
   share_mobile: true
-  share_weibo: true
+  share_weibo: false
   share_copyurl: true
-  categories: false # 是否显示分类
+  categories: true # 是否显示分类
   mode: # 运营模式与责任，不配置不显示
 
 # 欢迎语配置
