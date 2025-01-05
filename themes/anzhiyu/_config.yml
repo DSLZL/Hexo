@@ -1054,17 +1054,17 @@ home_top:
   subTitle: 万物可爱。
   siteText: anheyu.com
   category:
-    - name: 前端
+    - name: 暂无
       path: /categories/前端开发/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
-    - name: 大学
+    - name: 暂无
       path: /categories/大学生涯/
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: anzhiyu-icon-fire
-    - name: 生活
+    - name: 暂无
       path: /categories/生活日常/
       shadow: var(--anzhiyu-shadow-green)
       class: green
