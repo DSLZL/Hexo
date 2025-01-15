@@ -1240,7 +1240,7 @@ inject:
   head:
     # 自定义css
     # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
-    <meta name="yandex-verification" content="39784f8849aceb35" />
+  - <meta name="yandex-verification" content="39784f8849aceb35" />
 
   bottom:
     # 自定义js
