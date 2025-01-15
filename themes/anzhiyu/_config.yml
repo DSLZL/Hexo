@@ -603,8 +603,8 @@ site_verification:
     content: xxx
   - name: baidu-site-verification
     content: code-xxx
-  - name: msvalidate.01
-    content: xxx
+  - name: yandex-verification
+    content: 39784f8849aceb35
 
 # Beautify/Effect (美化/效果)
 # --------------------------------------
@@ -1240,7 +1240,6 @@ inject:
   head:
     # 自定义css
     # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
-  - <meta name="yandex-verification" content="39784f8849aceb35" />
 
   bottom:
     # 自定义js
