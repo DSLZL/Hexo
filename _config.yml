@@ -133,3 +133,13 @@ feed:
   icon: icon.png
   autodiscovery: true
   template:
+
+sitemap:
+  path: 
+    - sitemap.xml
+    - sitemap.txt
+  template: 
+  template_txt: 
+  rel: false
+  tags: true
+  categories: true
