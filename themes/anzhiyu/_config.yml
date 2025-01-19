@@ -603,8 +603,8 @@ site_verification:
     content: xxx
   - name: baidu-site-verification
     content: code-xxx
-  - name: yandex-verification
-    content: 39784f8849aceb35
+  - name: xxx
+    content: xxx
 
 # Beautify/Effect (美化/效果)
 # --------------------------------------
