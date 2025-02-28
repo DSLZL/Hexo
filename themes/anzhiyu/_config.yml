@@ -201,7 +201,7 @@ mainTone:
 # wordcount (字数统计)
 # see https://blog.anheyu.com/posts/c27d.html#字数统计
 wordcount:
-  enable: false
+  enable: true
   post_wordcount: true
   min2read: true
   total_wordcount: true
@@ -286,12 +286,12 @@ post_pagination: 2
 
 # Displays outdated notice for a post (文章过期提醒)
 noticeOutdate:
-  enable: false
+  enable: true
   style: flat # style: simple/flat
-  limit_day: 365 # When will it be shown
+  limit_day: 30 # When will it be shown
   position: top # position: top/bottom
   message_prev: It has been
-  message_next: days since the last update, the content of the article may be outdated.
+  message_next: 游戏可能有新版本了,去问问?
 
 # Share System (分享功能)
 # --------------------------------------
@@ -1258,14 +1258,16 @@ CDN:
 
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/anheyu/custom
-  third_party_provider: cbd
+  third_party_provider: custom
 
   # Add version number to CDN, true or false
   version: true
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: # https://npm.elemecdn.com/${name}@latest/${file}
+  custom_format:  https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
+                  # - https://registry.npmmirror.com/${cdnjs_name}/${version}/files/${min_cdnjs_file}
+                  # - https://npm.elemecdn.com/${name}@latest/${file}
 
   option:
     # main_css:
@@ -1327,7 +1329,7 @@ CDN:
     # pace_default_css:
     # countup_js:
     # gsap_js:
-    # busuanzi:
+      busuanzi: https://cn.vercount.one/js
     # rightmenu:
     # waterfall:
     # ali_iconfont_css:
