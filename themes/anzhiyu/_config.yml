@@ -1240,6 +1240,7 @@ inject:
   head:
     # 自定义css
     # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+      - <script defer src="https://umami.dslzl.top/script.js" data-website-id="bf4f653a-faf7-4629-98e5-0196ca50c405"></script>
 
   bottom:
     # 自定义js
