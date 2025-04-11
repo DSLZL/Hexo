@@ -26,49 +26,6 @@ block content
             - let data_type_update = theme.post_meta.post.date_type === 'updated'
             - let date_type = data_type_update ? 'updated' : 'date'
             time(itemprop="dateCreated datePublished" datetime=date_xml(page[date_type]) title=date_title + ' ' + full_date(page[date_type]))=date(page[date_type], config.date_format)
-      .ai-summary-box
-        b AI摘要
-        p#ai-output 正在生成中……
-        script.
-          async function sha(str) {
-            const encoder = new TextEncoder();
-            const data = encoder.encode(str);
-            const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            const hashHex = hashArray
-              .map((b) => b.toString(16).padStart(2, "0"))
-              .join("");
-            return hashHex;
-          }
-          async function ai_gen(){
-            var postContent = "文章标题：" + {{ page.title | jsonify }} + "；文章内容：" + {{ page.content | strip_html | strip_newlines | jsonify }};
-            var postContentSign = await sha(postContent);
-            var outputContainer = document.getElementById("ai-output");
-            $.get("https://summary.dslzl.eu.org/is_uploaded?id={{ page.url }}&sign=" + postContentSign, function (data) {
-              if (data == "yes") {
-                $.get("https://summary.dslzl.eu.org/get_summary?id={{ page.url }}&sign=" + postContentSign, function (data2) {
-                  outputContainer.textContent = data2;
-                });
-              } else {
-                $.post("https://summary.dslzl.eu.org/upload_blog?id={{ page.url }}", postContent, function (data) {
-                  $.get("https://summary.dslzl.eu.org/get_summary?id={{ page.url }}&sign=" + postContentSign);
-                  const evSource = new EventSource("https://summary.dslzl.eu.org/summary?id={{ page.url }}");
-                  outputContainer.textContent = "";
-                  evSource.onmessage = (event) => {
-                    if (event.data == "[DONE]") {
-                      evSource.close();
-                      return;
-                    } else {
-                      const data = JSON.parse(event.data);
-                      outputContainer.textContent += data.response;
-                    }
-                  }
-                });
-              }
-            });
-          }
-          ai_gen();
-        
       !=page.content
 
     include includes/post/post-copyright.pug
