@@ -144,3 +144,23 @@ sitemap:
   rel: false
   tags: true
   categories: true
+
+hexo-ai-summaries:
+  enable: true
+  # only work after this date
+  generateAfterDate: 2024/05 # optional
+  aiSummaryApi: https://summary.dslzl.eu.org/v1/chat/completions
+  maxToken: 30000 # optional
+  prompt:
+    You are a highly skilled AI trained in language comprehension and summarization. I would like you to read the text delimited by triple quotes and summarize it into a concise abstract paragraph. Aim to retain the most important points, providing a coherent and readable summary that could help a person understand the main points of the discussion without needing to read the entire text. Please avoid unnecessary details or tangential points.
+    Only give me the output and nothing else. Do not wrap responses in quotes. Respond in the Chinese language.
+  # fetch body
+  aiConfig:
+    model: deepseek/deepseek-chat-v3-0324:free
+    temperature: 0.7 # optional
+    stream: false # optional default true
+    headers: { 'Content-Type': 'application/json' } # optional, default undefined
+  tagConfig: # optional
+    title: .post-title
+    content: .post-content
+    toc: .toc-content
